@@ -1,0 +1,231 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  font-size: 0.82rem;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  transition: color var(--transition);
+  text-decoration: none;
+}
+
+.back:hover {
+  color: var(--accent);
+}
+
+.breadSep {
+  color: var(--text-muted);
+}
+
+.breadCat {
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* ── Main Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+  margin-bottom: 80px;
+}
+
+/* ── Gallery ── */
+.gallery {
+  position: sticky;
+  top: calc(var(--navbar-h) + 24px);
+}
+
+.swiperWrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #fff;
+  box-shadow: var(--shadow-md);
+}
+
+.swiper {
+  width: 100%;
+}
+
+.slideWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 420px;
+  padding: 40px;
+  background: #fff;
+}
+
+.mainImg {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* ── Info ── */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ratingText {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.price {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ── Quantity ── */
+.qtyRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.qtyLabel {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.qtyControl {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.qtyBtn {
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.qtyBtn:hover:not(:disabled) {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.qtyBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.qtyNum {
+  min-width: 44px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+/* ── Actions ── */
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.addBtn {
+  flex: 1;
+  min-width: 180px;
+  justify-content: center;
+  font-size: 0.95rem;
+  padding: 14px 24px;
+}
+
+.wishBtn {
+  padding: 14px 20px;
+  justify-content: center;
+  gap: 8px;
+}
+
+.wishlisted {
+  color: var(--danger) !important;
+  border-color: var(--danger) !important;
+  background: #fee2e2 !important;
+}
+
+/* ── Trust badges ── */
+.trustBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.trustBadges span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  background: var(--bg-secondary);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+}
+
+/* ── Related ── */
+.related {
+  padding: 48px 0;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .gallery {
+    position: static;
+  }
+  .slideWrap {
+    height: 300px;
+  }
+}
